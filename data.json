@@ -1,0 +1,74 @@
+[
+    {
+        "label": "st1",
+        "rate": {
+            "memory": 2005155464,
+            "load": 0.0,
+            "num_shards": 308,
+            "disk_bytes": 1.17585283704E11
+        }
+    },
+    {
+        "label": "st2",
+        "rate": {
+            "memory": 952758616,
+            "load": 0.05,
+            "num_shards": 308,
+            "disk_bytes": 1.16201213856E11
+        }
+    },
+    {
+        "label": "st3",
+        "rate": {
+            "memory": 1704651744,
+            "load": 0.0,
+            "num_shards": 306,
+            "disk_bytes": 1.11196039479E11
+        }
+    },
+    {
+        "label": "st4",
+        "rate": {
+            "memory": 951925864,
+            "load": 0.06,
+            "num_shards": 295,
+            "disk_bytes": 1.16082796121E11
+        }
+    },
+    {
+        "label": "st5",
+        "rate": {
+            "memory": 902408360,
+            "load": 0.01,
+            "num_shards": 293,
+            "disk_bytes": 1.15383401723E11
+        }
+    },
+    {
+        "label": "st6",
+        "rate": {
+            "memory": 981244528,
+            "load": 0.02,
+            "num_shards": 294,
+            "disk_bytes": 1.12832063636E11
+        }
+    },
+    {
+        "label": "st7",
+        "rate": {
+            "memory": 1196362568,
+            "load": 0.02,
+            "num_shards": 294,
+            "disk_bytes": 1.09456199918E11
+        }
+    },
+    {
+        "label": "st8",
+        "rate": {
+            "memory": 768967160,
+            "load": 0.25,
+            "num_shards": 293,
+            "disk_bytes": 1.09315817624E11
+        }
+    }
+]
