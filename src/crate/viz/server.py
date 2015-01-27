@@ -30,7 +30,7 @@ class HistoryHandler(RequestHandler):
         self.cursor = db.cursor()
 
     def get(self):
-        self.cursor.execute('select ts from cluster_viz order by ts limit 1')
+        self.cursor.execute('select ts from cluster_viz order by ts desc limit 1')
         res = self.cursor.fetchone()
         self.cursor.execute('select ts, name, load, num_shards, disk_bytes from cluster_viz where ts = ? order by name', res)
         res = self.cursor.fetchall()
