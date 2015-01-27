@@ -17,8 +17,7 @@ def main():
     lcursor = local.cursor()
     # remote crate
     conn = client.connect([
-        'http://st1.p.fir.io:4200',
-        'http://st2.p.fir.io:4200',
+        'https://demo.crate.io',
         ])
     rcursor = conn.cursor()
     while True:

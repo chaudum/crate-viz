@@ -10,8 +10,9 @@ import argparse
 
 from crate import client
 
-from tornado.web import Application, StaticFileHandler, RequestHandler
 from tornado.ioloop import IOLoop
+from tornado.options import parse_command_line
+from tornado.web import Application, StaticFileHandler, RequestHandler
 
 
 class StaticHandler(StaticFileHandler):
@@ -20,7 +21,7 @@ class StaticHandler(StaticFileHandler):
         full_path = os.path.join(root, path)
         if os.path.exists(full_path) and os.path.isdir(full_path):
             return os.path.join(full_path, 'index.html')
-        return self.render(full_path)
+        return full_path
 
 
 class HistoryHandler(RequestHandler):
@@ -43,7 +44,7 @@ def main():
     parser.add_argument('path', metavar='path', type=str)
     parser.add_argument('--port', dest='port', type=int, default='8080', help='server port')
     args = parser.parse_args()
-
+    parse_command_line()
     app = Application([
         (r"/data.json$", HistoryHandler),
         (r"/(.*)", StaticHandler, {"path": args.path}),
